@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 1120px;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 1px 0 #F9FAFB;
+    background: #fff;
+    max-width: 1120px;
+    width: 100%;
+}
+
+.logo-home {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nave {
+    cursor: pointer;
+    text-decoration: none;
+    color: #666666;
+    padding: 13px 16px;
+    font-size: 14px;
+}
+
+.nave:hover {
+    background-color: #D9D9D9;
+    opacity: 0.9;
+    border-radius: 8px;
+}
+
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    color: #666666;
+}
+
+/* HOME */
+
+section#home {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 20px;
+}
+
+.home-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h2 {
+    font-weight: 500;
+    color: #42446E;
+    font-size: 28px;
+}
+
+.nome {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.nome,
+.logo-home {
+    background: linear-gradient(315deg, #742DF6 25%, #25A2EF);
+    background-clip: text;
+    color: transparent;
+}
+
+.function {
+    display: block;
+    font-weight: 700;
+    color: #09debc;
+    font-size: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0ch;
+    border-right: 2px solid #42446E;
+    animation: mark 0.5s step-end infinite, write 6s steps(22, end) infinite;
+}
+
+@keyframes mark {
+    50% {
+        border-right: transparent;
+    }
+}
+
+@keyframes write {
+    20% {
+        width: 21.5ch;
+    }
+    70% {
+        width: 21.5ch;
+    }
+    85% {
+        width: 0;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+.resume {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.resume a {
+    color: #742DF6;
+    text-decoration: none;
+}
+
+.networks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.networks i {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.networks .ig {
+    color: #ee2a7b;
+}
+
+.networks .linkedin {
+    color: #0A66C2;
+}
+
+.networks .git {
+    color: #000;
+}
+
+.home-info button {
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    width: 160px;
+    background: linear-gradient(315deg, #e107b1 25%, #25A2EF);
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.home-info button:hover {
+    opacity: 1;
+}
+
+.home-info button a {
+    color: #FFF;
+}
+
+.profile{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile img {
+    width: 250px;
+    height: 250px;
+    animation: float 5s ease-in-out infinite;
+    box-shadow: 0 10px 10px;
+    border-radius: 50%;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+/* ABOUT */
+
+section#about {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 5px 20px;
+}
+
+.about-info {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 200px;
+    height: 80px;
+    background: #F9FAFB;
+    padding: 12px 12px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(222, 6, 6, 0.5);
+    margin: 24px 0 10px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out;
+}
+
+.item img {
+    width: 48px;
+    height: 48px;
+}
+
+.item h4 {
+    margin-left: 12px;
+    font-size: 14px;
+}
+
+.tecnologies .item.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* PROJECTS */
+
+section#projects {
+    min-height: calc(100vh + 80px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 5px 20px;
+}
+
+.projects-info {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.projects-resume {
+    text-align: center;
+    font-size: 14px;
+}
+
+.projs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 325px;
+    height: 450px;
+    background: #5876a2;
+    padding: 0 12px 12px 0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    margin: 24px 0 0 0;
+}
+
+.logo-projects img {
+    width: 325px;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+}
+
+.projects h4 {
+    margin: 12px 0 12px 0;
+    font-size: 18px;
+    padding-left: 12px;
+}
+
+.description,
+.tech {
+    padding-left: 12px;
+    color: #170c0c;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.tech {
+    margin: 12px 0 12px 0;
+}
+
+.repository a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.repository i {
+    font-size: 18px;
+    color: #000;
+    margin-right: 6px;
+}
+
+.repository span {
+    color: #000;
+    font-size: 14px;
+}
+
+/* CONTACT */
+
+section#contact {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 450px;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+input,
+textarea {
+    box-shadow: 0px 0px 10px 0px rgba(224, 13, 13, 0.5);
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+}
+
+#contact form button {
+    background: linear-gradient(315deg, #7e4167 25%, #16e737);
+    color: #FFF;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0.9;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+}
+
+#contact form button:hover {
+    opacity: 1;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #f30656;
+    font-size: 14px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.logo-footer {
+    color: #42446E;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.networks-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.networks-footer i {
+    font-size: 24px;
+    color: #42446E;
+}
+
+/* DARK */
+
+.dark, .dark header {
+    background:  #191919;
+}
+
+.dark header {
+    box-shadow: 0 1px 0 #A7A7A7;
+}
+
+.dark .menu-btn {
+    color: #A7A7A7;
+}
+
+.dark .open {
+    background:  #191919;
+}
+
+.dark .nave {
+    color: #A7A7A7;
+}
+
+.dark .nave:hover {
+    background-color: #42446E;
+}
+
+.dark h2 {
+    color: #D9D9D9;
+}
+
+.dark .function {
+    color: #D9D9D9;
+    border-right: 2px solid #D9D9D9;
+}
+
+.dark .resume {
+    color: #A7A7A7;
+}
+
+.dark .networks .git {
+    color: #fff;
+}
+
+.dark .profile img {
+    box-shadow: 0 10px 10px #A7A7A7;
+}
+
+.dark .item {
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+}
+
+.dark .project {
+    background: #363636;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+}
+
+.dark .title {
+    color: #D9D9D9;
+}
+
+.dark .description, .dark .tech {
+    color: #A7A7A7;
+}
+
+.dark .repository i {
+    color: #fff;
+}
+
+.dark .repository span {
+    color: #fff;
+}
+
+.dark input, .dark textarea {
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+}
+
+.dark footer {
+    color: #A7A7A7;
+}
+
+.dark .logo-footer {
+    color: #A7A7A7;
+}
+
+.dark .networks-footer i {
+    color: #A7A7A7;
+}
+
+
+
+
+/*Lanyard*/
+
+.status.online {
+    background-color: #4338ca; /* Indigo-700 */
+}
+
+.status.dnd {
+    background-color: #9d174d; /* Pink-800 */
+}
+
+.status.idle {
+    background-color: orange; /* Orange-700 */
+}
+
+.status.offline {
+    background-color: #c7d2fe; /* Indigo-200 */
+    color: #1e1b4b; /* Indigo-950 */
+}
+
+/* Import Tailwind 3.3.3 in JS with
+<script src="https://cdn.tailwindcss.com/3.3.3"></script>
+   for example */
+
+/* Lanyard Setup */
+/* Global */
+
+
+#start {
+    margin-top: -100px;
+}
+
+#nickname:first-letter {
+    text-transform: uppercase !important;
+}
+
+.force-text-color-on-preview {
+    color: #e0e7ff !important; /* Indigo-200 */
+}

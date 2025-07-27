@@ -1,0 +1,113 @@
+@media screen and (max-width: 450px) {
+    main {
+        width: 450px;
+        max-width: 100%;
+    }
+
+    .menu-btn {
+        display: block;
+        cursor: pointer;
+        right: -35%;
+    }
+
+    nav ul {
+        display: block;
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #180808;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    nav ul.open {
+        left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 50px 0;
+    }
+
+    .nav-list a {
+        color: #42446E;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    /* HOME */
+
+    section#home {
+        flex-direction: column-reverse;
+        justify-content: center;
+        min-height: calc(100vh + 160px);
+        scroll-margin-top: 80px;
+    }
+
+    .home-info {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .home-info,
+    .about-info {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .home-info h2 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 12px;
+    }
+
+    .function {
+        font-size: 18px;
+        margin: 8px 0 6px 0;
+    }
+
+    .resume {
+        font-size: 16px;
+        margin: 6px 0 6px 0;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ABOUT*/
+
+    section#about{
+        scroll-margin-top: 80px;
+    }
+
+    .technologies,
+    .projects {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* PROJECTS */
+
+    section#projects {
+        scroll-margin-top: 80px;
+    }
+
+    /* CONTACT */
+
+    #contact form {
+        max-width: 350px;
+    }
+}
+
+/*LANYARD*/
+
